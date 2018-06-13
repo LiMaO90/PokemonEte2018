@@ -22,6 +22,16 @@ public class Pokemon {
         tabCapacite = new Capacity[4];
     }
 
+    public String getNom() {
+        return nom;
+    }
+    public Type getType() {
+        return type;
+    }
+    public int getPv() {
+        return pv;
+    }
+
     public void addCapacity(Capacity capacity){
         int nbCapacite;
         Boolean estPasse = true;
@@ -43,6 +53,49 @@ public class Pokemon {
             tabCapacite[nbCapacity] = capacity;
             nbCapacity++;
         }
+    }
+
+    public void attaquer(int indiceCapacity, Pokemon pokemon) {
+        if(tabCapacite[indiceCapacity].getPP()<=0) {
+            if (tabCapacite[indiceCapacity].getType().equals(Type.feu)) {
+                switch (pokemon.getType().getType()) {
+                    case "plante":
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir() * 2);
+                        break;
+                    case "eau":
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir() / 2);
+                        break;
+                    default:
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir());
+                }
+            } else if (tabCapacite[indiceCapacity].getType().equals(Type.eau)) {
+                switch (pokemon.getType().getType()) {
+                    case "feu":
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir() * 2);
+                        break;
+                    case "plante":
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir() / 2);
+                        break;
+                    default:
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir());
+                }
+            } else if (tabCapacite[indiceCapacity].getType().equals(Type.plante)) {
+                switch (pokemon.getType().getType()) {
+                    case "eau":
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir() * 2);
+                        break;
+                    case "feu":
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir() / 2);
+                        break;
+                    default:
+                        pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir());
+                }
+            } else
+                pokemon.perduPV(tabCapacite[indiceCapacity].getPouvoir());
+            tabCapacite[indiceCapacity].utiliser();
+        }
+        else
+            System.out.println("Plus de PP");
     }
 
     public void perduPV(int pvPerdu){

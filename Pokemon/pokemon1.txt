@@ -1,0 +1,7 @@
+PokeTest // nom
+feu      //type
+
+1        // Capaite 1
+2        // Capaite 2
+3        // Capaite 3
+4        // Capaite 4

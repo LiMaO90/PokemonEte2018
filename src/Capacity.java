@@ -45,7 +45,10 @@ public class Capacity {
         return pouvoir;
     }
 
-    @Override
+    public void utiliser(){
+        PP--;
+    }
+
     public String toString() {
         return "nom='" + nom;
     }

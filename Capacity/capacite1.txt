@@ -1,0 +1,5 @@
+CapacityTest // nom
+jeu          // type
+
+10           // pouvoir
+20           // pp

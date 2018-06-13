@@ -1,8 +1,8 @@
 public enum Type {
     normal("normal"),
-    feu("normal"),
-    eau("normal"),
-    plante("normal");
+    feu("feu"),
+    eau("eau"),
+    plante("plante");
 
     private String name;
 
