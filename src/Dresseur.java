@@ -29,4 +29,6 @@ public class Dresseur {
     public void combattre(){
 
     }
+
+    public void fuir(){}
 }
