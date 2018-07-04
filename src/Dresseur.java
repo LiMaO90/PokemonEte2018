@@ -12,8 +12,9 @@ public class Dresseur {
         tabpokemon = new Pokemon[6];
     }
 
-
-
+    public void combattre(){
+        Combat combat = new Combat(50,this,new Dresseur("Red"));
+    }
 
 
     public void changerPlacePokemon(int indicePokemon1, int indicePokemon2){
