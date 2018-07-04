@@ -28,5 +28,13 @@ public class TestConsole {
             System.out.println("\n");
         }
          */
+
+        Dresseur dresseurPerso= new Dresseur("Ash");
+        Pokemon pikachu = new Pokemon(Type.normal,"pikachu");
+        Pokemon kaiminus = new Pokemon(Type.eau,"kaiminus");
+        dresseurPerso.setTabpokemon(0,pikachu);
+        dresseurPerso.combattre();
+
+
     }
 }
