@@ -1,7 +1,8 @@
-PokeTest // nom
-feu      //type
+PokeTest  // nom
+imageTest //ImagePokemon
+feu       //type
 
-1        // Capaite 1
-2        // Capaite 2
-3        // Capaite 3
-4        // Capaite 4
+capacite1         // Capaite 1
+capacite2         // Capaite 2
+capacite3         // Capaite 3
+capacite4         // Capaite 4

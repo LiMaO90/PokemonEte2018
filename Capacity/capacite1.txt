@@ -1,5 +1,5 @@
 CapacityTest // nom
-jeu          // type
+normal       // type
 
 10           // pouvoir
 20           // pp
