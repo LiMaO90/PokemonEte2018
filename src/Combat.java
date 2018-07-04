@@ -36,7 +36,10 @@ public class Combat {
 
     public void capturerPokemon(Pokemon pokemon){
         dresseurPerso.setTabpokemon(dresseurPerso.getNbPokemon(),pokemon);
-        dresseurPerso.setNbPokemon(dresseurPerso.getNbPokemon()+1);
+        if(dresseurPerso.getNbPokemon()>=6){
+            System.out.println("Vous n'avez plus de place dans votre équipe.");
+        }
+        else dresseurPerso.setNbPokemon(dresseurPerso.getNbPokemon()+1);
     }
 
     public void objet(){}
