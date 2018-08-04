@@ -22,5 +22,23 @@ public class ControlBouton implements ActionListener {
 
         else if(source == fenetre.getButtonChoixRetour())
             fenetre.changerFenetre("menu");
+
+        else if(source == fenetre.getButtonChoix0()){
+            model.setPokemon(0);
+            model.setPokemonRival((int) (Math.random()*3));
+            fenetre.changerFenetre("combat");
+        }
+        else if(source == fenetre.getButtonChoix1()){
+            model.setPokemon(1);
+            model.setPokemonRival((int) (Math.random()*3));
+            fenetre.changerFenetre("combat");
+        }
+        else if(source == fenetre.getButtonChoix2()){
+            model.setPokemon(2);
+            model.setPokemonRival((int) (Math.random()*3));
+            fenetre.changerFenetre("combat");
+        }
+        else if(source == fenetre.getButtonFuir())
+            fenetre.changerFenetre("choix");
     }
 }
